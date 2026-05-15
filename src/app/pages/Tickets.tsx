@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '../components/Button';
-import { Check, Users, ExternalLink } from 'lucide-react';
+import { Check, Users, ExternalLink, Backpack } from 'lucide-react';
+import { Link } from 'react-router';
 import { motion } from 'motion/react';
 
 export function Tickets() {
@@ -174,8 +175,39 @@ export function Tickets() {
         </div>
       </section>
 
-      {/* Bottom CTA */}
-      
+      {/* Packing List Callout */}
+      <section className="bg-white pb-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <Link
+              to="/packing-list"
+              className="group block bg-gradient-to-r from-[#FBB040]/10 to-[#EA0A8C]/10 rounded-2xl p-8 border-l-4 border-gradient hover:shadow-lg transition-shadow"
+              style={{
+                borderImage: 'linear-gradient(to bottom, #FBB040, #EA0A8C) 1'
+              }}
+            >
+              <div className="flex items-start gap-4">
+                <div className="bg-gradient-to-br from-[#FBB040] to-[#EA0A8C] p-3 rounded-lg flex-shrink-0">
+                  <Backpack className="text-white" size={28} />
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-xl mb-2 text-[#1C325A]">
+                    Got your ticket? Here's what to pack →
+                  </h4>
+                  <p className="text-[#1C325A] leading-relaxed">
+                    Costumes, comforts, and the one thing you absolutely cannot bring. Have a read of our packing list.
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 }
