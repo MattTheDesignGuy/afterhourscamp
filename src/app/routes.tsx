@@ -4,6 +4,7 @@ import { Home } from './pages/Home';
 import { Tickets } from './pages/Tickets';
 import { Contact } from './pages/Contact';
 import { Gallery } from './pages/Gallery';
+import { PackingList } from './pages/PackingList';
 
 export const router = createBrowserRouter(
   [
@@ -15,6 +16,7 @@ export const router = createBrowserRouter(
         { path: 'tickets', Component: Tickets },
         { path: 'gallery', Component: Gallery },
         { path: 'contact', Component: Contact },
+        { path: 'packing-list', Component: PackingList },
       ],
     },
   ],

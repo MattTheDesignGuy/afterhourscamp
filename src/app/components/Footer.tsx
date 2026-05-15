@@ -27,6 +27,9 @@ export function Footer() {
               <Link to="/tickets" className="hover:text-[#FBB040] transition-colors">
                 Tickets
               </Link>
+              <Link to="/packing-list" className="hover:text-[#FBB040] transition-colors">
+                Packing List
+              </Link>
               <Link to="/contact" className="hover:text-[#FBB040] transition-colors">
                 Contact
               </Link>
